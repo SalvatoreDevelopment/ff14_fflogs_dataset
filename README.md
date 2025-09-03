@@ -17,3 +17,5 @@ Quick start (no data fetch)
 Project status
 - This is a skeleton. Ingestion, normalization, metrics, features, and GUI wiring are scaffolded but not fully implemented yet.
 
+License
+- MIT License. See `LICENSE` for details.
