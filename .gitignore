@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+
+# Env & secrets
+.env
+.env.*
+*.env
+*.env.enc
+age.key
+
+# Virtual env
+.venv/
+
+# Data
+data/
+*.duckdb
+*.duckdb.wal
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini

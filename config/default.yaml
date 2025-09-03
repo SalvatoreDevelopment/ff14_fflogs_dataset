@@ -1,0 +1,37 @@
+app:
+  dataset_version: "0.1.0"
+  schema_version: "0.1.0"
+  game_patch: "7.3x"
+  tick_ms: 100
+  language: "it"
+  exploratory_mode: false
+
+paths:
+  data_root: "./data"
+  raw: "raw"
+  staging: "staging"
+  curated: "curated"
+  duckdb_file: "dataset.duckdb"
+  presets_dir: "./config/presets"
+
+ingestion:
+  concurrency: 3
+  sleep_ms: 300
+  quality_filters:
+    kills_only: true
+    min_percentile: 95
+  filters:
+    jobs: ["SAM"]
+    encounters: []   # names or IDs, configurable in GUI
+    patches: ["7.3x"]
+
+features:
+  labels:
+    next_gcd: true
+    ogcd_list: true
+    time_to_next_action: true
+  include_action_mask: true
+
+partitions:
+  scheme: "game_patch/encounter_name/job/report_date"
+
